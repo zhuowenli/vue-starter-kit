@@ -2,7 +2,7 @@
     <div class="row">
         <div class="quote-wrapper">
             <h2>Random Quote</h2>
-            <p>{{quote}}</p>
+            <p>{{{quote}}}</p>
         </div>
     </div>
 </template>
