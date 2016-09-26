@@ -14,18 +14,18 @@
 </template>
 
 <script>
-    import menus from "../services/menu.js";
+    import menus from '../services/menu.js';
 
     export default {
         data () {
             return {
                 menus
-            }
+            };
         },
         created () {
             // $('.side-nav').sideNav();
         }
-    }
+    };
 </script>
 
 <style lang="scss" scoped>

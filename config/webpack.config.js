@@ -5,29 +5,36 @@
  */
 'use strict';
 
-const webpack = require('webpack');
+// const webpack = require('webpack');
 const utils = require('./utils');
 const path = require('path');
 
 module.exports = {
     entry: ['./src/main.js'],
     output: {
-        path: '/build',
-        publicPath: "/js/",
-        filename: "app.js"
+        path: '/dist',
+        publicPath: './dist/',
+        filename: 'app.js'
     },
     watch: true,
     module: {
         loaders: [
             {
                 test: /\.js$/,
-                // excluding some local linked packages.
-                // for normal use cases only node_modules is needed.
                 exclude: /node_modules|vue\/src|vue-router\//,
+                loader: 'babel',
+                query: {
+                    compact: false
+                }
+            }, {
+                test: /vux.src.*?js$/,
                 loader: 'babel'
             }, {
                 test: /\.scss$/,
                 loaders: ['style', 'css', 'sass']
+            }, {
+                test: /\.json$/,
+                loader: 'json'
             }, {
                 test: /\.vue$/,
                 loader: 'vue'
@@ -35,7 +42,7 @@ module.exports = {
                 test: /\.(png|jpe?g|gif|svg|woff2?|eot|ttf|otf)(\?.*)?$/,
                 loader: 'url',
                 query: {
-                    limit: 2000,
+                    limit: 4096,
                     name: path.posix.join('static', '[name].[hash:7].[ext]')
                 }
             }
@@ -45,10 +52,13 @@ module.exports = {
             plugins: ['transform-runtime']
         },
         resolve: {
-            modulesDirectories: ['node_modules']
+            modulesDirectories: ['node_modules'],
+            alias: {
+                'vux-components': 'vux/src/components/'
+            }
         }
     },
     vue: {
         loaders: utils.cssLoaders()
     }
-}
+};

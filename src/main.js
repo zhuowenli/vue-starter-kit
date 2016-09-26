@@ -5,12 +5,10 @@
  */
 'use strict';
 
-import scss from './stylesheets/app.scss';
-
 import Vue from 'vue';
 import Resource from 'vue-resource';
 import Router from 'vue-router';
-import {routerConfig} from './router-config.js';
+import { routerConfig } from './router-config.js';
 
 import App from './components/App.vue';
 
@@ -29,7 +27,7 @@ routerConfig(router);
 
 // For every new route scroll to the top of the page
 router.beforeEach(function () {
-  window.scrollTo(0, 0)
+    window.scrollTo(0, 0);
 });
 
 // Start up our app
