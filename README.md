@@ -13,13 +13,19 @@ A simple starter for new vue project.
 ## Directory
     .
     ├── README.md
+    ├── index.html
+    ├── bower.json
     ├── gulpfile.js
     ├── package.json
-    ├── index.html
     ├── config
     │   ├── utils.js
     │   └── webpack.config.js
+    ├── dist
+    │   ├── app.js
+    │   └── app.js.map
     ├── src
+    │   ├── main.js
+    │   ├── router-config.js
     │   ├── components
     │   │   ├── 404.vue
     │   │   ├── About.vue
@@ -28,12 +34,11 @@ A simple starter for new vue project.
     │   │   ├── Quote.vue
     │   │   ├── SideNav.vue
     │   │   └── TopNav.vue
-    │   ├── main.js
-    │   ├── router-config.js
-    │   ├── services
-    │   │   ├── menu.js
+    │   ├── models
     │   │   └── quote
     │   │       └── index.js
+    │   ├── services
+    │   │   └── menu.js
     │   └── stylesheets
     │       └── app.scss
     └── static
