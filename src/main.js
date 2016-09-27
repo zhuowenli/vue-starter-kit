@@ -12,6 +12,9 @@ import { routerConfig } from './router-config.js';
 
 import App from './components/App.vue';
 
+// import 'materialize-css/sass/materialize.scss';
+// import 'materialize-css/dist/js/materialize.js';
+
 // Install plugins
 Vue.use(Router);
 Vue.use(Resource);

@@ -27,9 +27,6 @@ module.exports = {
                     compact: false
                 }
             }, {
-                test: /vux.src.*?js$/,
-                loader: 'babel'
-            }, {
                 test: /\.scss$/,
                 loaders: ['style', 'css', 'sass']
             }, {
@@ -52,10 +49,7 @@ module.exports = {
             plugins: ['transform-runtime']
         },
         resolve: {
-            modulesDirectories: ['node_modules'],
-            alias: {
-                'vux-components': 'vux/src/components/'
-            }
+            modulesDirectories: ['node_modules']
         }
     },
     vue: {
