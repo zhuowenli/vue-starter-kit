@@ -1,0 +1,9 @@
+{
+    "directory": "vendor/",
+    "color": true,
+    "save": true,
+    "json": "bower.json",
+    "ignoredDependencies": [
+        "jquery"
+    ]
+}

@@ -1,0 +1,30 @@
+{
+  "name": "vue-starter-kit",
+  "description": "A simple starter for new vue project.",
+  "main": "src/main.js",
+  "authors": [
+    "卓文理"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "vue",
+    "vue",
+    "router",
+    "webpack",
+    "gulp",
+    "babel"
+  ],
+  "homepage": "https://github.com/zhuowenli/vue-starter-kit",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "vendor/",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "materialize": "^0.97.7",
+    "jquery": "^3.1.1"
+  }
+}
